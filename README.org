@@ -1,0 +1,159 @@
+* chord-progression
+
+A Clojure library for parsing and playing chord progressions.
+
+** Installation
+
+Add the following to your `project.clj` file:
+
+#+BEGIN_SRC clojure
+[chord-progression "0.1.0"]
+#+END_SRC
+
+** Usage
+
+#+BEGIN_SRC clojure
+(require '[chord-progression.parser :as parser])
+(require '[chord-progression.player :as player])
+
+(def chord-progression
+  [[[:am :g :f :e] [:am :g :f :e]]
+   [[:c :g :am :em] [:f :g :am :em]]
+   [[:f :g :am :em] [:f :g :am :e]]])
+
+(player/play-chord-progression chord-progression)
+#+END_SRC
+
+This example loads the `chord-progression.parser` and `chord-progression.player` namespaces and defines a chord progression as a vector of vectors of notes. It then calls the `player/play-chord-progression` function to play the chord progression.
+
+** API
+
+*** `chord-progression.parser`
+
+**** `parse-chord-progression`
+
+#+BEGIN_SRC clojure
+(parser/parse-chord-progression "Am G F E\nAm G F E\n\nC G Am Em\nF G Am Em\n\nF G Am Em\nF G Am E\n")
+#+END_SRC
+
+Parses a chord progression string into a vector of vectors of notes.
+
+*** `chord-progression.player`
+
+**** `play-chord-progression`
+
+#+BEGIN_SRC clojure
+(player/play-chord-progression
+  [[[:am :g :f :e] [:am :g :f :e]]
+   [[:c :g :am :em] [:f :g :am :em]]
+   [[:f :g :am :em] [:f :g :am :e]]])
+#+END_SRC
+
+Plays a chord progression represented as a vector of vectors of notes.
+
+** License
+
+MIT
+* chord-progression
+
+A Clojure library for parsing and playing chord progressions.
+
+** Installation
+
+Add the following to your `project.clj` file:
+
+#+BEGIN_SRC clojure
+[chord-progression "0.1.0"]
+#+END_SRC
+
+** Usage
+
+#+BEGIN_SRC clojure
+(require '[chord-progression.parser :as parser])
+(require '[chord-progression.player :as player])
+
+(def chord-progression
+  [[[:am :g :f :e] [:am :g :f :e]]
+   [[:c :g :am :em] [:f :g :am :em]]
+   [[:f :g :am :em] [:f :g :am :e]]])
+
+(player/play-chord-progression chord-progression)
+#+END_SRC
+
+This example loads the `chord-progression.parser` and `chord-progression.player` namespaces and defines a chord progression as a vector of vectors of notes. It then calls the `player/play-chord-progression` function to play the chord progression.
+
+** API
+
+*** `chord-progression.parser`
+
+**** `parse-chord-progression`
+
+#+BEGIN_SRC clojure
+(parser/parse-chord-progression "Am G F E\nAm G F E\n\nC G Am Em\nF G Am Em\n\nF G Am Em\nF G Am E\n")
+#+END_SRC
+
+Parses a chord progression string into a vector of vectors of notes.
+
+*** `chord-progression.player`
+
+**** `play-chord-progression`
+
+#+BEGIN_SRC clojure
+(player/play-chord-progression
+  [[[:am :g :f :e] [:am :g :f :e]]
+   [[:c :g :am :em] [:f :g :am :em]]
+   [[:f :g :am :em] [:f :g :am :e]]])
+#+END_SRC
+
+Plays a chord progression represented as a vector of vectors of notes.
+
+** License
+
+MIT
+
+** Extended Examples 
+
+#+BEGIN_SRC clojure
+(require '[clojure.data.json :as json])
+
+(defschema chord-progression
+  {:type ::chord-progression
+   :verse [::chord-list]
+   :chorus [::chord-list]
+   :bridge [::chord-list]})
+
+(defschema chord-list
+  {:type ::chord-list
+   :chords [::chord]})
+
+(defschema chord
+  {:type ::chord
+   :name keyword?
+   :fret int?})
+
+(defn parse-chord-progression [json-file]
+  (let [json-data (slurp json-file)
+        chord-progression (json/read-str json-data :key-fn keyword)]
+    (validate chord-progression chord-progression-schema)
+    chord-progression))
+#+END_SRC
+
+#+BEGIN_SRC clojure
+(require '[overtone.live :as overtone])
+
+(defn play-chord-list [chord-list]
+  (doseq [chord (chord-list :chords)]
+    (let [note (midi-note-number (str chord))]
+      (at (overtone/now)
+        (overtone/synth
+          (overtone/saw note)
+          (overtone/free))))))
+        
+(defn play-chord-progression [chord-progression]
+  (doseq [chord-list (chord-progression :verse)]
+    (play-chord-list chord-list))
+  (doseq [chord-list (chord-progression :chorus)]
+    (play-chord-list chord-list))
+  (doseq [chord-list (chord-progression :bridge)]
+    (play-chord-list chord-list)))
+#+END_SRC

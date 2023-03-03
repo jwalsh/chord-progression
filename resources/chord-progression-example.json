@@ -1,0 +1,27 @@
+{
+    "verse": {
+      "chords": [
+        {"chord": "Am"},
+        {"chord": "G"},
+        {"chord": "F"},
+        {"chord": "E"}
+      ]
+    },
+    "chorus": {
+      "chords": [
+        {"chord": "C"},
+        {"chord": "G"},
+        {"chord": "Am"},
+        {"chord": "Em"}
+      ]
+    },
+    "bridge": {
+      "chords": [
+        {"chord": "F"},
+        {"chord": "G"},
+        {"chord": "Am"},
+        {"chord": "Em"}
+      ]
+    }
+  }
+  
