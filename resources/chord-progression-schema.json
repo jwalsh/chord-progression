@@ -1,44 +1,54 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Chord Progression",
+    "description": "A schema for representing chord progressions for musical compositions.",
     "type": "object",
+    "required": ["title", "composer", "key", "sections"],
     "properties": {
-      "verse": {
-        "type": "object",
-        "properties": {
-          "chords": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": ["chords"]
+      "title": {
+        "type": "string",
+        "description": "The title of the composition."
       },
-      "chorus": {
-        "type": "object",
-        "properties": {
-          "chords": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": ["chords"]
+      "composer": {
+        "type": "string",
+        "description": "The composer of the composition."
       },
-      "bridge": {
-        "type": "object",
-        "properties": {
-          "chords": {
-            "type": "array",
-            "items": {
-              "type": "string"
+      "key": {
+        "type": "string",
+        "description": "The key of the composition."
+      },
+      "sections": {
+        "type": "array",
+        "description": "The sections of the composition.",
+        "items": {
+          "type": "object",
+          "required": ["title", "chords"],
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the section."
+            },
+            "chords": {
+              "type": "array",
+              "description": "The chords in the section.",
+              "items": {
+                "type": "object",
+                "required": ["name", "duration"],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the chord."
+                  },
+                  "duration": {
+                    "type": "integer",
+                    "description": "The duration of the chord in beats."
+                  }
+                }
+              }
             }
           }
-        },
-        "required": ["chords"]
+        }
       }
-    },
-    "required": ["verse", "chorus", "bridge"]
+    }
   }
   
