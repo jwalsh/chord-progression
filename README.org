@@ -51,10 +51,6 @@ Parses a chord progression string into a vector of vectors of notes.
 
 Plays a chord progression represented as a vector of vectors of notes.
 
-** License
-
-MIT
-
 ** Extended Examples 
 
 #+BEGIN_SRC clojure
@@ -101,3 +97,7 @@ MIT
   (doseq [chord-list (chord-progression :bridge)]
     (play-chord-list chord-list)))
 #+END_SRC
+
+** License
+
+MIT
