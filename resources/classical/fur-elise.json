@@ -1,0 +1,134 @@
+{
+    "title": "Für Elise",
+    "composer": "Ludwig van Beethoven",
+    "key": "A minor",
+    "time_signature": "3/8",
+    "tempo": 138,
+    "chord_progression": [
+      {
+        "name": "A minor",
+        "duration": 2
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "C major",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "F major",
+        "duration": 1
+      },
+      {
+        "name": "C major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "F major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 2
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "C major",
+        "duration": 1
+      },
+      {
+        "name": "E major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "F major",
+        "duration": 1
+      },
+      {
+        "name": "C major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 1
+      },
+      {
+        "name": "F major",
+        "duration": 1
+      },
+      {
+        "name": "A minor",
+        "duration": 2
+      }
+    ]
+  }
+  
