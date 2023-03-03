@@ -1,0 +1,62 @@
+{
+    "title": "The Message",
+    "artist": "Grandmaster Flash and the Furious Five",
+    "key": "C minor",
+    "sections": [
+      {
+        "title": "Verse 1",
+        "chords": [
+          {"name": "Cm", "duration": 4},
+          {"name": "G#", "duration": 4},
+          {"name": "D#", "duration": 4},
+          {"name": "A#", "duration": 4}
+        ]
+      },
+      {
+        "title": "Chorus",
+        "chords": [
+          {"name": "Cm", "duration": 8},
+          {"name": "G#", "duration": 8},
+          {"name": "D#", "duration": 8},
+          {"name": "A#", "duration": 8}
+        ]
+      },
+      {
+        "title": "Verse 2",
+        "chords": [
+          {"name": "Cm", "duration": 4},
+          {"name": "G#", "duration": 4},
+          {"name": "D#", "duration": 4},
+          {"name": "A#", "duration": 4}
+        ]
+      },
+      {
+        "title": "Chorus",
+        "chords": [
+          {"name": "Cm", "duration": 8},
+          {"name": "G#", "duration": 8},
+          {"name": "D#", "duration": 8},
+          {"name": "A#", "duration": 8}
+        ]
+      },
+      {
+        "title": "Verse 3",
+        "chords": [
+          {"name": "Cm", "duration": 4},
+          {"name": "G#", "duration": 4},
+          {"name": "D#", "duration": 4},
+          {"name": "A#", "duration": 4}
+        ]
+      },
+      {
+        "title": "Chorus",
+        "chords": [
+          {"name": "Cm", "duration": 8},
+          {"name": "G#", "duration": 8},
+          {"name": "D#", "duration": 8},
+          {"name": "A#", "duration": 8}
+        ]
+      }
+    ]
+  }
+  
