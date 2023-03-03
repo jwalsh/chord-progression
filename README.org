@@ -28,9 +28,9 @@ This example loads the `chord-progression.parser` and `chord-progression.player`
 
 ** API
 
-*** `chord-progression.parser`
+*** ~chord-progression.parser~
 
-**** `parse-chord-progression`
+**** ~parse-chord-progression~
 
 #+BEGIN_SRC clojure
 (parser/parse-chord-progression "Am G F E\nAm G F E\n\nC G Am Em\nF G Am Em\n\nF G Am Em\nF G Am E\n")
@@ -38,9 +38,9 @@ This example loads the `chord-progression.parser` and `chord-progression.player`
 
 Parses a chord progression string into a vector of vectors of notes.
 
-*** `chord-progression.player`
+*** ~chord-progression.player~
 
-**** `play-chord-progression`
+**** ~play-chord-progression~
 
 #+BEGIN_SRC clojure
 (player/play-chord-progression
