@@ -1,0 +1,8 @@
+* chord-progression 0.1.0-SNAPSHOT (2023-03-02)
+
+** Changes
+
+** Bug Fixes
+
+** Features
+
